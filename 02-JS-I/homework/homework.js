@@ -28,15 +28,8 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  return 'Hola ' + str;
+  return str;
 }
-console.log(devolverString('Mundo'));
-//Imprimo una segunda solo para practicar!
-var curso = 'Henry';
-var imprime = devolverString(curso);
-console.log(imprime + ", Buen dia!. voy a continuar estudiando!");
-//Imprimo una Tercera solo para practicar!
-console.log(devolverString('Henry') + ", Buen dia!. voy a continuar estudiando!");
 
 
 function suma(x, y) {
@@ -45,16 +38,12 @@ function suma(x, y) {
   // Tu código:
   return x + y;
 }
-console.log(suma(3,8));
-
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
   return x - y;
 }
-var restando = resta(8,3);
-console.log(restando);
 
 
 function multiplica(x, y) {
@@ -62,7 +51,6 @@ function multiplica(x, y) {
   // Tu código:
   return x * y;  
 }
-multiplica(5, 8);
 
 
 function divide(x, y) {
@@ -70,19 +58,19 @@ function divide(x, y) {
   // Tu código:
   return x / y;
 }
-divide(8,4);
 
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  return x === y;
+  if (x === y){
+    return true;
+  }
+  else {
+    return false
+  }
 }
-var igualdad = sonIguales(5,2);
-console.log(igualdad);
-var igualdad = sonIguales(5,5);
-console.log(igualdad);
 
 
 function tienenMismaLongitud(str1, str2) {
@@ -91,22 +79,18 @@ function tienenMismaLongitud(str1, str2) {
   // Tu código:
   return str1.length === str2.length;
 }
-var cadena = tienenMismaLongitud('Caracas', 'Lima');
-console.log(cadena);
-var cadena = tienenMismaLongitud('Madrid', 'Berlin');
-console.log(cadena);
 
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num < 90;
+  if(num < 90) {
+    return true;
+  } else {
+    return false;
+  }
 }
-var numero1 = menosQueNoventa(80);
-var numero2 = menosQueNoventa(280);
-console.log(numero1);
-console.log(numero2);
 
 
 function mayorQueCincuenta(num) {
@@ -115,20 +99,12 @@ function mayorQueCincuenta(num) {
   // Tu código:
   return num > 50;
 }
-var numero3 = mayorQueCincuenta(80);
-var numero4 = mayorQueCincuenta(28);
-console.log(numero3);
-console.log(numero4);
-
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
   return x % y;
 }
-var x = 21;
-var y = 5;
-console.log('El resto entre '+ x +' y '+ y +' es: ' + obtenerResto(x,y));
 
 
 function esPar(num) {
@@ -142,8 +118,6 @@ function esPar(num) {
     return false;
   }
 }
-var numero = 20;
-console.log(esPar(numero));
 
 
 function esImpar(num) {
@@ -157,8 +131,6 @@ function esImpar(num) {
     return false;
   }
 }
-var numero = 15
-console.log(esImpar(numero));
 
 
 function elevarAlCuadrado(num) {
@@ -167,43 +139,32 @@ function elevarAlCuadrado(num) {
   // Tu código:
   return Math.pow(num, 2);
 }
-var numero = 3;
-console.log(elevarAlCuadrado(numero));
 
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(num, 3);
+  return num * num * num;
 }
-var numero3 = 3;
-console.log(elevarAlCubo(numero3));
 
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return num ** exponent;
+  return Math.pow(num, exponent);
 }
-var base = 2;
-var exponente = 5;
-console.log(elevar(base, exponente));
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return Math.round(num/3);
+  return Math.round(num);
 }
-var numero = 5
-console.log(redondearNumero(numero))
-
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   return Math.ceil(num)
 }
-console.log(redondearHaciaArriba(7.0006))
 
 
 function numeroRandom() {
@@ -211,7 +172,6 @@ function numeroRandom() {
   //Pista: investigá qué hace el método Math.random()
   return Math.random()
 }
-console.log(numeroRandom());
 
 
 function esPositivo(numero) {
@@ -229,8 +189,6 @@ function esPositivo(numero) {
     return false
   }
 }
-var numero = 5
-console.log(esPositivo(numero));
 
 
 function agregarSimboloExclamacion(str) {
@@ -239,8 +197,6 @@ function agregarSimboloExclamacion(str) {
   // Tu código:
   return str +'!'
 }
-console.log(agregarSimboloExclamacion('Hola Mundo'));
-
 
 
 function combinarNombres(nombre, apellido) {
@@ -249,9 +205,6 @@ function combinarNombres(nombre, apellido) {
   // Tu código:
   return 'Tu nombre es ' + nombre +' y mi apellido es '+ apellido;
 }
-var primerNombre = prompt('Cual es tu primer nombre?: ');
-var primerApellido = prompt('Cual es tu primer apellido?: ')
-console.log(combinarNombres(primerNombre, primerApellido))
 
 
 function obtenerSaludo(nombre) {
@@ -260,8 +213,6 @@ function obtenerSaludo(nombre) {
   // Tu código:
   return '"Hola ' + nombre +'!"';
 }
-var tuNombre = prompt('Cual es tu nombre?: ');
-console.log(obtenerSaludo(tuNombre));
 
 
 
@@ -270,9 +221,6 @@ function obtenerAreaRectangulo(alto, ancho) {
   // Tu código:
  return 'El area del rectangulo es: ' + alto * ancho + ' unidades cuadradas';
 }
-var alto1 = prompt('Cual es el alto del rectangulo?: ');
-var ancho1 = prompt('Cual es el ancho del rectangulo: ');
-console.log(obtenerAreaRectangulo(alto1, ancho1));
 
 
 function retornarPerimetro(lado){
@@ -280,8 +228,6 @@ function retornarPerimetro(lado){
   //Escribe tu código aquí
   return 'El perimetro del cuadrado es de: ' + lado * 4 + ' unidades lineales'
 }
-var lado1 = prompt('Cual es la medida de un lado del cuadrado?: ');
-console.log(retornarPerimetro(lado1))
 
 
 
@@ -290,10 +236,6 @@ function areaDelTriangulo(base, altura){
   //Escribe tu código aquí
   return 'El Area del triangulo es de: ' + (base * altura) / 2 + ' unidades cuadradas';
 }
-var base1 = prompt('Cual es la medida de la base del triangulo?: ');
-var altura2 = prompt('Cual es la medida de la altura del triangulo?: ');
-console.log(areaDelTriangulo(base1, altura2));
-
 
 
 function deEuroAdolar(euro){
@@ -302,8 +244,6 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   return moneda + ' Euros son: ' + euro * 1.20 + ' Dolares';
 }
-var moneda = prompt('cuantos euros tienes?: ');
-console.log(deEuroAdolar(moneda));
 
 
 function esVocal(letra){
@@ -322,8 +262,6 @@ function esVocal(letra){
     return 'Dato Incorrecto'
   }
 }
-
-
 
 
 
