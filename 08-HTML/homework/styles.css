@@ -1,0 +1,45 @@
+body{
+    margin: 30px;
+    background-image: url(https://i.pinimg.com/originals/39/a0/20/39a020757805b48c83a05e93cd4f5fcb.jpg);
+    background-size: auto; /*Tama;o de la imagen de fondo*/
+    background-repeat: no-repeat;
+    background-size: cover; /*expandir imagen de fondo*/
+}
+
+div.divClass1 h1{
+    text-align: center;
+    font-size: 100px;
+    color: rgb(6, 1, 10);
+    font-family: 'Corinthia', cursive;
+}
+
+div.divClass2{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+div.divClass2 span{
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 50px;
+}
+
+div.divClass3{
+    margin: 0 auto;
+    border: 10px dotted rgb(126, 16, 230);
+    width: 500px; height: 600px; 
+    background-color: aqua; 
+    padding: 50px;
+}
+
+div.divClass3 li{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.email{
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
